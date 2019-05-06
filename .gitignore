@@ -3,3 +3,4 @@ bin/
 datos/*.dat
 .settings/
 /.gradle/
+/.nb-gradle/
