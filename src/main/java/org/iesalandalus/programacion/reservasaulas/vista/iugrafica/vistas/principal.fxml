@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="600.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.iesalandalus.programacion.reservasaulas.vista.iugrafica.controladoresVistas.PrincipalController">
+  <items>
+    <AnchorPane>
+         <children>
+            <TitledPane animated="false" collapsible="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="750.0" text="I.E.S Al-Ándalus" textAlignment="CENTER">
+               <content>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#vaulas" prefHeight="223.0" prefWidth="235.0" text="Aulas" textFill="#4c6bed" wrapText="true">
+                           <font>
+                              <Font size="29.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="188.0" fitWidth="190.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../imagenes/descarga.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#vaulas" prefHeight="203.0" prefWidth="179.0" text="Profesores" textFill="#2d70e0">
+                           <font>
+                              <Font size="29.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="159.0" fitWidth="156.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../imagenes/descarga%20(1).png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#vaulas" prefHeight="223.0" prefWidth="250.0" text="Reservar aula" textFill="#2549ff">
+                           <font>
+                              <Font size="28.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../imagenes/descarga%20(2).png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+               </content>
+               <font>
+                  <Font name="Yu Gothic Regular" size="50.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="153.0" fitWidth="299.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../imagenes/-TkmwF2K.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </TitledPane>
+         </children></AnchorPane>
+    <AnchorPane>
+         <children>
+            <Button mnemonicParsing="false" onAction="#mostrar" prefHeight="92.0" prefWidth="119.0">
+               <graphic>
+                  <ImageView fitHeight="108.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../imagenes/480px-Messagebox_info.svg.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label fx:id="info" layoutX="139.0" layoutY="-12.0" prefHeight="104.0" prefWidth="504.0" text="Nos encontramos ante una aplicación desarrollada en Java junto su interfaz gráfica desarrollada con Java FX la cual nos permitirá  listar, añadir, borrar o buscar aulas, profesores y/o reservas de aulas así como reservar aulas para una fecha concreta o consultar la disponibilidad de estas." textFill="#d71818" wrapText="true">
+               <font>
+                  <Font size="13.0" />
+               </font></Label>
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="643.0" layoutY="46.0" mnemonicParsing="false" onAction="#ocultar" prefHeight="10.0" prefWidth="88.0" text="Ocultar info" />
+         </children></AnchorPane>
+  </items>
+</SplitPane>

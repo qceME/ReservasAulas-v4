@@ -8,6 +8,11 @@
 
 // Apply the java-library plugin to add support for Java Library
 apply plugin: 'java-library'
+tasks.withType(JavaCompile) {
+
+  options.encoding = "UTF-8"
+
+}
 
 // In this section you declare where to find the dependencies of your project
 repositories {
@@ -30,12 +35,22 @@ dependencies {
 //Añadido por mí
 apply plugin: 'application'
 
-mainClassName = 'org.iesalandalus.programacion.reservasaulas.MainApp'
+mainClassName = 'org.iesalandalus.programacion.reservasaulas.MainVista'
 
 jar {
 	manifest {
-		attributes 'Main-Class': 'org.iesalandalus.programacion.reservasaulas.MainApp'
+		attributes 'Main-Class': 'org.iesalandalus.programacion.reservasaulas.MainVista'
 	}
+}
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/main/java']
+        }
+        resources {
+            srcDirs = ['src/main/java']
+        }
+    }
 }
 
 run {

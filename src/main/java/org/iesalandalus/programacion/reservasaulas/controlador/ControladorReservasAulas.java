@@ -17,7 +17,7 @@ import org.iesalandalus.programacion.reservasaulas.modelo.dominio.Aula;
 import org.iesalandalus.programacion.reservasaulas.modelo.dominio.Profesor;
 import org.iesalandalus.programacion.reservasaulas.modelo.dominio.Reserva;
 import org.iesalandalus.programacion.reservasaulas.modelo.dominio.permanencia.Permanencia;
-import org.iesalandalus.programacion.reservasaulas.vista.VistaReservasAulas;
+import org.iesalandalus.programacion.reservasaulas.vista.iutextual.VistaReservasAulas;
 
 /**
  *
@@ -79,6 +79,12 @@ public class ControladorReservasAulas implements IControladorReservasAulas {
 	public List<String> representarAulas() {
 		return modelo.representarAulas();
 	}
+            @Override
+	public List<Aula> getAulas(){
+		return modelo.getAulas();
+	}
+                    
+
 	
     @Override
 	public void insertarProfesor(Profesor p) throws OperationNotSupportedException {
@@ -214,6 +220,11 @@ public class ControladorReservasAulas implements IControladorReservasAulas {
     @Override
     public void realizarReserva() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public List<Profesor> getProfesores() {
+		return modelo.getProfesores();
     }
 
 

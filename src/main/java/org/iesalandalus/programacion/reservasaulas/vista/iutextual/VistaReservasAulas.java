@@ -1,5 +1,5 @@
 
-package org.iesalandalus.programacion.reservasaulas.vista;
+package org.iesalandalus.programacion.reservasaulas.vista.iutextual;
 
 import java.time.format.DateTimeParseException;
 import java.util.List;
@@ -12,6 +12,7 @@ import org.iesalandalus.programacion.reservasaulas.modelo.dominio.Profesor;
 import org.iesalandalus.programacion.reservasaulas.modelo.dominio.Reserva;
 import org.iesalandalus.programacion.reservasaulas.modelo.dominio.permanencia.PermanenciaPorHora;
 import org.iesalandalus.programacion.reservasaulas.modelo.dominio.permanencia.PermanenciaPorTramo;
+import org.iesalandalus.programacion.reservasaulas.vista.IVistaReservasAulas;
 import org.iesalandalus.programacion.utilidades.Entrada;
 
 /**
@@ -117,7 +118,7 @@ public class VistaReservasAulas implements IVistaReservasAulas {
 	
     @Override
 	public void insertarProfesor() {
-	Consola.mostrarCabecera("Insertar Profesor");
+	Consola.mostrarCabecera("Insertar Profesor"); 
         
 		try {
 		Profesor profesor = Consola.leerProfesor();

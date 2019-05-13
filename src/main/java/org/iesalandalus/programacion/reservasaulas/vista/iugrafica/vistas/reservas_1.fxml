@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.iesalandalus.programacion.reservasaulas.vista.iugrafica.controladoresVistas.ControladorAulas">
+   <children>
+      <TabPane prefHeight="500.0" prefWidth="700.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Aulas">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.29797979797979796" prefHeight="394.0" prefWidth="600.0">
+                           <items>
+                              <AnchorPane minHeight="500.0" minWidth="350.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <ListView fx:id="lvAulas" prefHeight="472.0" prefWidth="349.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane minHeight="0.0" minWidth="350.0" prefHeight="423.0" prefWidth="471.0">
+                                 <children>
+                                    <Label layoutX="24.0" layoutY="31.0" prefHeight="32.0" prefWidth="145.0" text="Nombre:">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="24.0" layoutY="104.0" text="Numero de puestos:">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <TextArea fx:id="tanombre" layoutX="24.0" layoutY="63.0" prefHeight="26.0" prefWidth="200.0" />
+                                    <Button layoutX="54.0" layoutY="271.0" mnemonicParsing="false" onAction="#anadirA" prefHeight="53.0" prefWidth="192.0" text="Añadir aula" />
+                                    <Button layoutX="54.0" layoutY="337.0" mnemonicParsing="false" onAction="#eliminarA" prefHeight="53.0" prefWidth="192.0" text="Eliminar aula" />
+                                    <TextArea fx:id="tapuestos" layoutX="24.0" layoutY="130.0" prefHeight="26.0" prefWidth="200.0" />
+                                 </children>
+                              </AnchorPane>
+                           </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Profesores">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.29797979797979796" prefHeight="394.0" prefWidth="600.0">
+                           <items>
+                              <AnchorPane minHeight="500.0" minWidth="350.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <ListView fx:id="lvProfesores" prefHeight="470.0" prefWidth="350.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane minHeight="0.0" minWidth="339.0" prefHeight="500.0" prefWidth="339.0">
+                                 <children>
+                                    <Label layoutX="24.0" layoutY="31.0" prefHeight="32.0" prefWidth="145.0" text="Nombre:">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="24.0" layoutY="104.0" text="Telefono">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <TextArea fx:id="tanombreP" layoutX="24.0" layoutY="63.0" prefHeight="26.0" prefWidth="200.0" />
+                                    <TextArea fx:id="tatelefono" layoutX="24.0" layoutY="130.0" prefHeight="26.0" prefWidth="200.0" />
+                                    <Button fx:id="btAceptar" layoutX="54.0" layoutY="271.0" mnemonicParsing="false" onAction="#anadirP" prefHeight="53.0" prefWidth="192.0" text="Añadir profesor" />
+                                    <Button layoutX="54.0" layoutY="337.0" mnemonicParsing="false" onAction="#eliminarP" prefHeight="53.0" prefWidth="192.0" text="Eliminar profesor" />
+                                    <Label layoutX="24.0" layoutY="172.0" text="Correo">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="tacorreo" layoutX="24.0" layoutY="209.0" prefHeight="32.0" prefWidth="200.0" />
+                                 </children>
+                              </AnchorPane>
+                           </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Reservas">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="1.0" prefHeight="394.0" prefWidth="600.0">
+                           <items>
+                              <AnchorPane minHeight="500.0" minWidth="350.0" prefHeight="500.0" prefWidth="443.0">
+                                 <children>
+                                    <ListView fx:id="lvReservas" layoutX="-14.0" prefHeight="470.0" prefWidth="350.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane minHeight="0.0" minWidth="350.0" prefHeight="423.0" prefWidth="471.0">
+                                 <children>
+                                    <Button layoutX="54.0" layoutY="356.0" mnemonicParsing="false" onAction="#realizarReserva" prefHeight="53.0" prefWidth="192.0" text="Añadir reserva" />
+                                    <Button layoutX="54.0" layoutY="422.0" mnemonicParsing="false" onAction="#anularReserva" prefHeight="53.0" prefWidth="192.0" text="Anular reserva" />
+                                    <GridPane layoutX="3.0" prefHeight="265.0" prefWidth="345.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label alignment="BOTTOM_CENTER" contentDisplay="BOTTOM" text="Aula:">
+                                             <graphic>
+                                                <ComboBox fx:id="cbAula" prefWidth="150.0" />
+                                             </graphic>
+                                          </Label>
+                                          <Label contentDisplay="BOTTOM" text="Profesor:" GridPane.rowIndex="1">
+                                             <graphic>
+                                                <ComboBox fx:id="cbProfesor" prefWidth="150.0" />
+                                             </graphic>
+                                          </Label>
+                                          <HBox prefHeight="45.0" prefWidth="311.0" GridPane.rowIndex="3">
+                                             <children>
+                                                <RadioButton fx:id="rbTramo" alignment="TOP_LEFT" contentDisplay="BOTTOM" mnemonicParsing="false" prefHeight="17.0" prefWidth="114.0" text="Por tramo " />
+                                                <RadioButton fx:id="rbHora" mnemonicParsing="false" prefHeight="17.0" prefWidth="130.0" text="Por Hora" />
+                                             </children>
+                                          </HBox>
+                                          <Label fx:id="phora" contentDisplay="BOTTOM" prefHeight="17.0" prefWidth="130.0" text=" Permanencia: " GridPane.rowIndex="2">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="tramo" contentDisplay="BOTTOM" prefHeight="20.0" prefWidth="196.0" text="¿Mañana o tarde?" textFill="#61a6dd" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox prefHeight="45.0" prefWidth="311.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                             <children>
+                                                <RadioButton fx:id="rbtramoM" alignment="TOP_LEFT" contentDisplay="BOTTOM" mnemonicParsing="false" prefHeight="17.0" prefWidth="114.0" text="MAÑANA" visible="false" />
+                                                <RadioButton fx:id="rbtramoT" mnemonicParsing="false" prefHeight="17.0" prefWidth="130.0" text="TARDE" visible="false" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </GridPane>
+                                    <Label contentDisplay="BOTTOM" layoutY="250.0" prefHeight="46.0" prefWidth="149.0" text="Fecha:">
+                                       <graphic>
+                                          <DatePicker fx:id="fecha" prefHeight="25.0" prefWidth="151.0" />
+                                       </graphic>
+                                    </Label>
+                                    <AnchorPane layoutX="149.0" layoutY="243.0" prefHeight="106.0" prefWidth="187.0">
+                                       <children>
+                                          <Label fx:id="lhora" contentDisplay="BOTTOM" prefHeight="20.0" prefWidth="181.0" text="Introduce la hora(hh:mm):" textFill="#61a6dd" visible="false">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="tfhora" layoutX="16.0" layoutY="28.0" visible="false" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

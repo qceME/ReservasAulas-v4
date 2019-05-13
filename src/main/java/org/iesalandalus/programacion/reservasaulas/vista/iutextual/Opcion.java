@@ -1,9 +1,10 @@
 
-package org.iesalandalus.programacion.reservasaulas.vista;
+package org.iesalandalus.programacion.reservasaulas.vista.iutextual;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.naming.OperationNotSupportedException;
+import org.iesalandalus.programacion.reservasaulas.vista.IVistaReservasAulas;
 
 /**
  *

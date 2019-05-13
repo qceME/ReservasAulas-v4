@@ -46,6 +46,9 @@ public interface IControladorReservasAulas extends IVistaReservasAulas {
     void realizarReserva(Reserva r) throws OperationNotSupportedException;
 
     List<String> representarAulas();
+    List<Aula> getAulas();
+        List<Profesor> getProfesores();
+
 
     List<String> representarProfesores();
 
