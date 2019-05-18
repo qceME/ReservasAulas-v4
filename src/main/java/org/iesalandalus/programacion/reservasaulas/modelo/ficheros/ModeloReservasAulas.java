@@ -1,12 +1,13 @@
 
-package org.iesalandalus.programacion.reservasaulas.modelo;
+package org.iesalandalus.programacion.reservasaulas.modelo.ficheros;
 
 import java.io.IOException;
 import java.util.List;
 import javax.naming.OperationNotSupportedException;
-import org.iesalandalus.programacion.reservasaulas.modelo.dao.Aulas;
-import org.iesalandalus.programacion.reservasaulas.modelo.dao.Profesores;
-import org.iesalandalus.programacion.reservasaulas.modelo.dao.Reservas;
+import org.iesalandalus.programacion.reservasaulas.modelo.IModeloReservasAulas;
+import org.iesalandalus.programacion.reservasaulas.modelo.ficheros.dao.Aulas;
+import org.iesalandalus.programacion.reservasaulas.modelo.ficheros.dao.Profesores;
+import org.iesalandalus.programacion.reservasaulas.modelo.ficheros.dao.Reservas;
 import org.iesalandalus.programacion.reservasaulas.modelo.dominio.Aula;
 import org.iesalandalus.programacion.reservasaulas.modelo.dominio.Aula;
 import org.iesalandalus.programacion.reservasaulas.modelo.dominio.permanencia.Permanencia;

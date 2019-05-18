@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.iesalandalus.programacion.reservasaulas.modelo.dao;
+package org.iesalandalus.programacion.reservasaulas.modelo.ficheros.dao;
 
 import java.io.EOFException;
 import java.io.File;
