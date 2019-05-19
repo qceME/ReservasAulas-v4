@@ -30,6 +30,9 @@ dependencies {
 
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
+    //Driver para mongoDB
+    compile 'org.mongodb:mongodb-driver-sync:3.10.1'
+    
 }
 
 //Añadido por mí
